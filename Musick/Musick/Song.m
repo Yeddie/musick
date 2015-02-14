@@ -15,6 +15,7 @@ int const SONG_ALBUM_INDEX = 2;
 int const SONG_DURATION_INDEX = 3;
 int const SONG_YEAR_INDEX = 4;
 int const SONG_FILEPATH_INDEX = 5;
+int const SONG_IMAGE_INDEX = 6;
 
 @implementation Song
 
@@ -24,6 +25,7 @@ int const SONG_FILEPATH_INDEX = 5;
 @dynamic duration;
 @dynamic year;
 @dynamic filepath;
+@dynamic image;
 @synthesize url;
 
 +(void)loadAll {
@@ -45,10 +47,12 @@ int const SONG_FILEPATH_INDEX = 5;
         NSString *duration = songRow[SONG_DURATION_INDEX];
         NSString *year     = songRow[SONG_YEAR_INDEX];
         NSString *filepath = songRow[SONG_FILEPATH_INDEX];
+        NSString *image    = songRow[SONG_IMAGE_INDEX];
         
         [self insertSongWithTitle:title andArtist:artist
                          andAlbum:album andDuration:duration
-                          andYear:year andFilepath:filepath];
+                          andYear:year andFilepath:filepath
+                         andImage:image];
     }
 }
 
@@ -72,7 +76,8 @@ int const SONG_FILEPATH_INDEX = 5;
 
 + (void) insertSongWithTitle:(NSString *) title andArtist:(NSString *) artist
                     andAlbum:(NSString *) album andDuration:(NSString *) duration
-                     andYear:(NSString *) year andFilepath:(NSString *) filepath {
+                     andYear:(NSString *) year andFilepath:(NSString *) filepath
+                    andImage:(NSString *) image {
     
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     
@@ -83,6 +88,7 @@ int const SONG_FILEPATH_INDEX = 5;
     song.duration = duration;
     song.year = year;
     song.filepath = filepath;
+    song.image = image;
 
     [coreDataStack saveContext];
 }

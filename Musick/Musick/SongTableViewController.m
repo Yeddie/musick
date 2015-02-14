@@ -10,6 +10,7 @@
 #import "CoreDataStack.h"
 #import "Song.h"
 #import "SongTableViewCell.h"
+#import "SongDetailViewController.h"
 
 @interface SongTableViewController () <NSFetchedResultsControllerDelegate>
 
@@ -64,25 +65,37 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"songCellReuseId" forIndexPath:indexPath];
 
     Song *song = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = song.title;
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
     cell.detailTextLabel.text = song.artist;
-
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    
+    cell.backgroundColor = [UIColor clearColor];
+    
     return cell;
 }
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"showSongDetail" sender:cell];
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showSongDetail"]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        SongDetailViewController *songDetailViewController = (SongDetailViewController *) segue.destinationViewController;
+        songDetailViewController.song = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
 }
-*/
+
 
 @end

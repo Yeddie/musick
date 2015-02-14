@@ -25,6 +25,7 @@
 		68AF62BF1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62BC1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 */; };
 		68AF62C01A8FD95D00894867 /* Rage in Your New Shoes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62BD1A8FD95D00894867 /* Rage in Your New Shoes.mp3 */; };
 		68AF62C11A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62BE1A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 */; };
+		68AF62C51A8FE01100894867 /* SongDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62C41A8FE01100894867 /* SongDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68435B441A90083F00DDFD99 /* Musick 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Musick 2.xcdatamodel"; sourceTree = "<group>"; };
 		68AF62781A8FA50200894867 /* Musick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AF627C1A8FA50200894867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AF627D1A8FA50200894867 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		68AF62BC1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I Remember (Strobelite Mix).mp3"; sourceTree = "<group>"; };
 		68AF62BD1A8FD95D00894867 /* Rage in Your New Shoes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rage in Your New Shoes.mp3"; sourceTree = "<group>"; };
 		68AF62BE1A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Atmosphere (Kaskade Redux Edit).mp3"; sourceTree = "<group>"; };
+		68AF62C31A8FE01100894867 /* SongDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongDetailViewController.h; sourceTree = "<group>"; };
+		68AF62C41A8FE01100894867 /* SongDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				68AF62AB1A8FB90E00894867 /* Song.m */,
 				68AF62B01A8FC13E00894867 /* SongTableViewController.h */,
 				68AF62B11A8FC13E00894867 /* SongTableViewController.m */,
+				68AF62C31A8FE01100894867 /* SongDetailViewController.h */,
+				68AF62C41A8FE01100894867 /* SongDetailViewController.m */,
 				68AF62881A8FA50200894867 /* Main.storyboard */,
 				68AF628D1A8FA50200894867 /* LaunchScreen.xib */,
 				68AF628B1A8FA50200894867 /* Images.xcassets */,
@@ -275,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68AF62B71A8FD72000894867 /* SongTableViewCell.m in Sources */,
+				68AF62C51A8FE01100894867 /* SongDetailViewController.m in Sources */,
 				68AF62AC1A8FB90E00894867 /* Song.m in Sources */,
 				68AF62B21A8FC13E00894867 /* SongTableViewController.m in Sources */,
 				68AF62811A8FA50200894867 /* AppDelegate.m in Sources */,
@@ -472,6 +479,7 @@
 				68AF62A01A8FA50200894867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68AF62A11A8FA50200894867 /* Build configuration list for PBXNativeTarget "MusickTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +488,7 @@
 				68AF62A31A8FA50200894867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -487,9 +496,10 @@
 		68AF62821A8FA50200894867 /* Musick.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				68435B441A90083F00DDFD99 /* Musick 2.xcdatamodel */,
 				68AF62831A8FA50200894867 /* Musick.xcdatamodel */,
 			);
-			currentVersion = 68AF62831A8FA50200894867 /* Musick.xcdatamodel */;
+			currentVersion = 68435B441A90083F00DDFD99 /* Musick 2.xcdatamodel */;
 			path = Musick.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

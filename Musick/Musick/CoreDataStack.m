@@ -51,6 +51,12 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Musick.sqlite"]; //Change name for any future application
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
+    
+    /*
+    In case of data migration
+    NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES};
+     */
+    
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
