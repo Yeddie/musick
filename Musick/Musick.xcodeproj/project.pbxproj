@@ -14,6 +14,17 @@
 		68AF628C1A8FA50200894867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AF628B1A8FA50200894867 /* Images.xcassets */; };
 		68AF628F1A8FA50200894867 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68AF628D1A8FA50200894867 /* LaunchScreen.xib */; };
 		68AF629B1A8FA50200894867 /* MusickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF629A1A8FA50200894867 /* MusickTests.m */; };
+		68AF62A61A8FB50500894867 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62A41A8FB50500894867 /* CoreDataStack.m */; };
+		68AF62AC1A8FB90E00894867 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62AB1A8FB90E00894867 /* Song.m */; };
+		68AF62AF1A8FBCC400894867 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62AD1A8FBCC400894867 /* CHCSVParser.m */; };
+		68AF62B21A8FC13E00894867 /* SongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62B11A8FC13E00894867 /* SongTableViewController.m */; };
+		68AF62B41A8FCA1900894867 /* songs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62B31A8FCA1900894867 /* songs.csv */; };
+		68AF62B71A8FD72000894867 /* SongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62B61A8FD72000894867 /* SongTableViewCell.m */; };
+		68AF62BA1A8FD91A00894867 /* Bohemian Rhapsody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62B81A8FD91A00894867 /* Bohemian Rhapsody.mp3 */; };
+		68AF62BB1A8FD91A00894867 /* Whole Lotta Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62B91A8FD91A00894867 /* Whole Lotta Love.mp3 */; };
+		68AF62BF1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62BC1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 */; };
+		68AF62C01A8FD95D00894867 /* Rage in Your New Shoes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62BD1A8FD95D00894867 /* Rage in Your New Shoes.mp3 */; };
+		68AF62C11A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62BE1A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +50,22 @@
 		68AF62941A8FA50200894867 /* MusickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AF62991A8FA50200894867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AF629A1A8FA50200894867 /* MusickTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusickTests.m; sourceTree = "<group>"; };
+		68AF62A41A8FB50500894867 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		68AF62A51A8FB50500894867 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		68AF62AA1A8FB90E00894867 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		68AF62AB1A8FB90E00894867 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		68AF62AD1A8FBCC400894867 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		68AF62AE1A8FBCC400894867 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		68AF62B01A8FC13E00894867 /* SongTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewController.h; sourceTree = "<group>"; };
+		68AF62B11A8FC13E00894867 /* SongTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewController.m; sourceTree = "<group>"; };
+		68AF62B31A8FCA1900894867 /* songs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = songs.csv; sourceTree = "<group>"; };
+		68AF62B51A8FD72000894867 /* SongTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongTableViewCell.h; sourceTree = "<group>"; };
+		68AF62B61A8FD72000894867 /* SongTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongTableViewCell.m; sourceTree = "<group>"; };
+		68AF62B81A8FD91A00894867 /* Bohemian Rhapsody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bohemian Rhapsody.mp3"; sourceTree = "<group>"; };
+		68AF62B91A8FD91A00894867 /* Whole Lotta Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Whole Lotta Love.mp3"; sourceTree = "<group>"; };
+		68AF62BC1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "I Remember (Strobelite Mix).mp3"; sourceTree = "<group>"; };
+		68AF62BD1A8FD95D00894867 /* Rage in Your New Shoes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rage in Your New Shoes.mp3"; sourceTree = "<group>"; };
+		68AF62BE1A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Atmosphere (Kaskade Redux Edit).mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +109,21 @@
 			children = (
 				68AF627F1A8FA50200894867 /* AppDelegate.h */,
 				68AF62801A8FA50200894867 /* AppDelegate.m */,
+				68AF62AA1A8FB90E00894867 /* Song.h */,
+				68AF62AB1A8FB90E00894867 /* Song.m */,
+				68AF62B01A8FC13E00894867 /* SongTableViewController.h */,
+				68AF62B11A8FC13E00894867 /* SongTableViewController.m */,
 				68AF62881A8FA50200894867 /* Main.storyboard */,
-				68AF628B1A8FA50200894867 /* Images.xcassets */,
 				68AF628D1A8FA50200894867 /* LaunchScreen.xib */,
+				68AF628B1A8FA50200894867 /* Images.xcassets */,
 				68AF62821A8FA50200894867 /* Musick.xcdatamodeld */,
+				68AF62A51A8FB50500894867 /* CoreDataStack.h */,
+				68AF62A41A8FB50500894867 /* CoreDataStack.m */,
+				68AF62AE1A8FBCC400894867 /* CHCSVParser.h */,
+				68AF62AD1A8FBCC400894867 /* CHCSVParser.m */,
 				68AF627B1A8FA50200894867 /* Supporting Files */,
+				68AF62B51A8FD72000894867 /* SongTableViewCell.h */,
+				68AF62B61A8FD72000894867 /* SongTableViewCell.m */,
 			);
 			path = Musick;
 			sourceTree = "<group>";
@@ -94,8 +131,10 @@
 		68AF627B1A8FA50200894867 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68AF62C21A8FDAE000894867 /* Song Files */,
 				68AF627C1A8FA50200894867 /* Info.plist */,
 				68AF627D1A8FA50200894867 /* main.m */,
+				68AF62B31A8FCA1900894867 /* songs.csv */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -115,6 +154,18 @@
 				68AF62991A8FA50200894867 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68AF62C21A8FDAE000894867 /* Song Files */ = {
+			isa = PBXGroup;
+			children = (
+				68AF62BE1A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 */,
+				68AF62B81A8FD91A00894867 /* Bohemian Rhapsody.mp3 */,
+				68AF62BC1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 */,
+				68AF62BD1A8FD95D00894867 /* Rage in Your New Shoes.mp3 */,
+				68AF62B91A8FD91A00894867 /* Whole Lotta Love.mp3 */,
+			);
+			name = "Song Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,9 +248,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AF62C11A8FD95D00894867 /* Atmosphere (Kaskade Redux Edit).mp3 in Resources */,
 				68AF628A1A8FA50200894867 /* Main.storyboard in Resources */,
+				68AF62B41A8FCA1900894867 /* songs.csv in Resources */,
+				68AF62BF1A8FD95D00894867 /* I Remember (Strobelite Mix).mp3 in Resources */,
+				68AF62BA1A8FD91A00894867 /* Bohemian Rhapsody.mp3 in Resources */,
 				68AF628F1A8FA50200894867 /* LaunchScreen.xib in Resources */,
 				68AF628C1A8FA50200894867 /* Images.xcassets in Resources */,
+				68AF62C01A8FD95D00894867 /* Rage in Your New Shoes.mp3 in Resources */,
+				68AF62BB1A8FD91A00894867 /* Whole Lotta Love.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68AF62B71A8FD72000894867 /* SongTableViewCell.m in Sources */,
+				68AF62AC1A8FB90E00894867 /* Song.m in Sources */,
+				68AF62B21A8FC13E00894867 /* SongTableViewController.m in Sources */,
 				68AF62811A8FA50200894867 /* AppDelegate.m in Sources */,
+				68AF62AF1A8FBCC400894867 /* CHCSVParser.m in Sources */,
+				68AF62A61A8FB50500894867 /* CoreDataStack.m in Sources */,
 				68AF62841A8FA50200894867 /* Musick.xcdatamodeld in Sources */,
 				68AF627E1A8FA50200894867 /* main.m in Sources */,
 			);
