@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68AF627E1A8FA50200894867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF627D1A8FA50200894867 /* main.m */; };
+		68AF62811A8FA50200894867 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62801A8FA50200894867 /* AppDelegate.m */; };
+		68AF62841A8FA50200894867 /* Musick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62821A8FA50200894867 /* Musick.xcdatamodeld */; };
+		68AF628A1A8FA50200894867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68AF62881A8FA50200894867 /* Main.storyboard */; };
+		68AF628C1A8FA50200894867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68AF628B1A8FA50200894867 /* Images.xcassets */; };
+		68AF628F1A8FA50200894867 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68AF628D1A8FA50200894867 /* LaunchScreen.xib */; };
+		68AF629B1A8FA50200894867 /* MusickTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF629A1A8FA50200894867 /* MusickTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68AF62951A8FA50200894867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68AF62701A8FA50100894867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68AF62771A8FA50100894867;
+			remoteInfo = Musick;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68AF62781A8FA50200894867 /* Musick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musick.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68AF627C1A8FA50200894867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68AF627D1A8FA50200894867 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68AF627F1A8FA50200894867 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68AF62801A8FA50200894867 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68AF62831A8FA50200894867 /* Musick.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Musick.xcdatamodel; sourceTree = "<group>"; };
+		68AF62891A8FA50200894867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68AF628B1A8FA50200894867 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		68AF628E1A8FA50200894867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		68AF62941A8FA50200894867 /* MusickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68AF62991A8FA50200894867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68AF629A1A8FA50200894867 /* MusickTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusickTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68AF62751A8FA50100894867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68AF62911A8FA50200894867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68AF626F1A8FA50100894867 = {
+			isa = PBXGroup;
+			children = (
+				68AF627A1A8FA50200894867 /* Musick */,
+				68AF62971A8FA50200894867 /* MusickTests */,
+				68AF62791A8FA50200894867 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68AF62791A8FA50200894867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68AF62781A8FA50200894867 /* Musick.app */,
+				68AF62941A8FA50200894867 /* MusickTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68AF627A1A8FA50200894867 /* Musick */ = {
+			isa = PBXGroup;
+			children = (
+				68AF627F1A8FA50200894867 /* AppDelegate.h */,
+				68AF62801A8FA50200894867 /* AppDelegate.m */,
+				68AF62881A8FA50200894867 /* Main.storyboard */,
+				68AF628B1A8FA50200894867 /* Images.xcassets */,
+				68AF628D1A8FA50200894867 /* LaunchScreen.xib */,
+				68AF62821A8FA50200894867 /* Musick.xcdatamodeld */,
+				68AF627B1A8FA50200894867 /* Supporting Files */,
+			);
+			path = Musick;
+			sourceTree = "<group>";
+		};
+		68AF627B1A8FA50200894867 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68AF627C1A8FA50200894867 /* Info.plist */,
+				68AF627D1A8FA50200894867 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68AF62971A8FA50200894867 /* MusickTests */ = {
+			isa = PBXGroup;
+			children = (
+				68AF629A1A8FA50200894867 /* MusickTests.m */,
+				68AF62981A8FA50200894867 /* Supporting Files */,
+			);
+			path = MusickTests;
+			sourceTree = "<group>";
+		};
+		68AF62981A8FA50200894867 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68AF62991A8FA50200894867 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68AF62771A8FA50100894867 /* Musick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68AF629E1A8FA50200894867 /* Build configuration list for PBXNativeTarget "Musick" */;
+			buildPhases = (
+				68AF62741A8FA50100894867 /* Sources */,
+				68AF62751A8FA50100894867 /* Frameworks */,
+				68AF62761A8FA50100894867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Musick;
+			productName = Musick;
+			productReference = 68AF62781A8FA50200894867 /* Musick.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68AF62931A8FA50200894867 /* MusickTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68AF62A11A8FA50200894867 /* Build configuration list for PBXNativeTarget "MusickTests" */;
+			buildPhases = (
+				68AF62901A8FA50200894867 /* Sources */,
+				68AF62911A8FA50200894867 /* Frameworks */,
+				68AF62921A8FA50200894867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68AF62961A8FA50200894867 /* PBXTargetDependency */,
+			);
+			name = MusickTests;
+			productName = MusickTests;
+			productReference = 68AF62941A8FA50200894867 /* MusickTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68AF62701A8FA50100894867 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Eddie Groberski";
+				TargetAttributes = {
+					68AF62771A8FA50100894867 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					68AF62931A8FA50200894867 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 68AF62771A8FA50100894867;
+					};
+				};
+			};
+			buildConfigurationList = 68AF62731A8FA50100894867 /* Build configuration list for PBXProject "Musick" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68AF626F1A8FA50100894867;
+			productRefGroup = 68AF62791A8FA50200894867 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68AF62771A8FA50100894867 /* Musick */,
+				68AF62931A8FA50200894867 /* MusickTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68AF62761A8FA50100894867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68AF628A1A8FA50200894867 /* Main.storyboard in Resources */,
+				68AF628F1A8FA50200894867 /* LaunchScreen.xib in Resources */,
+				68AF628C1A8FA50200894867 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68AF62921A8FA50200894867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68AF62741A8FA50100894867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68AF62811A8FA50200894867 /* AppDelegate.m in Sources */,
+				68AF62841A8FA50200894867 /* Musick.xcdatamodeld in Sources */,
+				68AF627E1A8FA50200894867 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68AF62901A8FA50200894867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68AF629B1A8FA50200894867 /* MusickTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68AF62961A8FA50200894867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68AF62771A8FA50100894867 /* Musick */;
+			targetProxy = 68AF62951A8FA50200894867 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68AF62881A8FA50200894867 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68AF62891A8FA50200894867 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68AF628D1A8FA50200894867 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68AF628E1A8FA50200894867 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68AF629C1A8FA50200894867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68AF629D1A8FA50200894867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68AF629F1A8FA50200894867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Musick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68AF62A01A8FA50200894867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Musick/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68AF62A21A8FA50200894867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musick.app/Musick";
+			};
+			name = Debug;
+		};
+		68AF62A31A8FA50200894867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusickTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musick.app/Musick";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68AF62731A8FA50100894867 /* Build configuration list for PBXProject "Musick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68AF629C1A8FA50200894867 /* Debug */,
+				68AF629D1A8FA50200894867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68AF629E1A8FA50200894867 /* Build configuration list for PBXNativeTarget "Musick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68AF629F1A8FA50200894867 /* Debug */,
+				68AF62A01A8FA50200894867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		68AF62A11A8FA50200894867 /* Build configuration list for PBXNativeTarget "MusickTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68AF62A21A8FA50200894867 /* Debug */,
+				68AF62A31A8FA50200894867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68AF62821A8FA50200894867 /* Musick.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68AF62831A8FA50200894867 /* Musick.xcdatamodel */,
+			);
+			currentVersion = 68AF62831A8FA50200894867 /* Musick.xcdatamodel */;
+			path = Musick.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 68AF62701A8FA50100894867 /* Project object */;
+}
