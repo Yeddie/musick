@@ -62,8 +62,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album-art-missing" translatesAutoresizingMaskIntoConstraints="NO" id="YBx-uj-Jhz">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album-art-missing" translatesAutoresizingMaskIntoConstraints="NO" id="YBx-uj-Jhz">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="V0M-9z-Rgt" appends="YES" id="LlI-w3-2H9"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMP-hU-bp0">
                                 <rect key="frame" x="16" y="454" width="288" height="22"/>
@@ -95,16 +99,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdt-93-kMp">
+                                <rect key="frame" x="123" y="386" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mdt-93-kMp" secondAttribute="height" multiplier="37:15" id="703-A9-ArM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="YBx-uj-Jhz" secondAttribute="trailing" id="1EN-Vo-CTQ"/>
+                            <constraint firstAttribute="trailing" secondItem="mdt-93-kMp" secondAttribute="trailing" constant="123" id="1Ha-xQ-FG4"/>
+                            <constraint firstItem="mdt-93-kMp" firstAttribute="leading" secondItem="b3Q-UU-VJK" secondAttribute="leading" constant="123" id="1c6-sy-x5B"/>
                             <constraint firstItem="lMP-hU-bp0" firstAttribute="leading" secondItem="b3Q-UU-VJK" secondAttribute="leading" constant="16" id="2W3-hR-J31"/>
                             <constraint firstItem="lMP-hU-bp0" firstAttribute="top" secondItem="u5J-Tu-FgY" secondAttribute="bottom" constant="8" id="6Kd-mt-ybr"/>
                             <constraint firstItem="YBx-uj-Jhz" firstAttribute="leading" secondItem="b3Q-UU-VJK" secondAttribute="leading" id="6t1-Ot-5o9"/>
                             <constraint firstAttribute="trailing" secondItem="lMP-hU-bp0" secondAttribute="trailing" constant="16" id="8Gp-YH-dYi"/>
                             <constraint firstItem="lMP-hU-bp0" firstAttribute="top" secondItem="u5J-Tu-FgY" secondAttribute="bottom" constant="8" id="GYw-Tv-oyV"/>
                             <constraint firstItem="Q9o-Rf-GYP" firstAttribute="top" secondItem="xQk-vk-Om5" secondAttribute="bottom" constant="13" id="ISW-5K-gjs"/>
+                            <constraint firstItem="u5J-Tu-FgY" firstAttribute="top" secondItem="mdt-93-kMp" secondAttribute="bottom" constant="8" id="K81-Yb-40P"/>
                             <constraint firstAttribute="trailing" secondItem="xQk-vk-Om5" secondAttribute="trailing" constant="16" id="K8N-4b-c5T"/>
                             <constraint firstItem="Q9o-Rf-GYP" firstAttribute="top" secondItem="YBx-uj-Jhz" secondAttribute="bottom" id="L5D-kB-gII"/>
                             <constraint firstItem="xQk-vk-Om5" firstAttribute="top" secondItem="lMP-hU-bp0" secondAttribute="bottom" constant="8" id="S2f-Mv-o7x"/>
@@ -120,10 +136,16 @@
                         <outlet property="albumLabel" destination="xQk-vk-Om5" id="FBv-bq-7Xa"/>
                         <outlet property="artistLabel" destination="u5J-Tu-FgY" id="mIW-E4-LIp"/>
                         <outlet property="image" destination="YBx-uj-Jhz" id="xrw-Vs-Md3"/>
+                        <outlet property="pauseLabel" destination="mdt-93-kMp" id="frc-E1-vSY"/>
                         <outlet property="titleLabel" destination="lMP-hU-bp0" id="lbg-Eh-PQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9S-7F-uOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="V0M-9z-Rgt">
+                    <connections>
+                        <action selector="pressPlay:" destination="3vD-MP-cbO" id="aC8-Fm-LY8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1915" y="-275"/>
         </scene>

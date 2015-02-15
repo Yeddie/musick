@@ -18,13 +18,14 @@
 @property (retain, nonatomic) NSString *year;
 @property (retain, nonatomic) NSString *filepath;
 @property (retain, nonatomic) NSString *image;
-@property (strong, nonatomic) NSURL *url;
 
-+ (void)loadAll;
-+ (void)deleteAll;
+
++ (void) loadAll;
++ (void) deleteAll;
 + (void) insertSongWithTitle:(NSString *) title andArtist:(NSString *) artist
                     andAlbum:(NSString *) album andDuration:(NSString *) duration
                      andYear:(NSString *) year andFilepath:(NSString *) filepath
                     andImage:(NSString *) image;
++ (NSURL *) urlFromFilepath:(NSString *) filepath;
 
 @end

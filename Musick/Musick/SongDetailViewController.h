@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Song;
+#import <AVFoundation/AVFoundation.h>
+#import "Song.h"
 
 @interface SongDetailViewController : UIViewController
 
@@ -16,5 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 @property (weak, nonatomic) IBOutlet UILabel *albumLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *pauseLabel;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+
+- (void)_play:(Song *)song;
+- (void)_pause;
+- (void)_togglePlayButton;
+- (IBAction)pressPlay:(id)sender;
 
 @end

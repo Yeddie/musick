@@ -26,7 +26,7 @@ int const SONG_IMAGE_INDEX = 6;
 @dynamic year;
 @dynamic filepath;
 @dynamic image;
-@synthesize url;
+
 
 +(void)loadAll {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
@@ -38,7 +38,6 @@ int const SONG_IMAGE_INDEX = 6;
         NSLog(@"CSV file is empty");
     }
 
-    NSLog(@"csv: %@", csv);
     //Loop through csv file and insert songs into Core Data
     for (NSArray *songRow in csv) {
         NSString *title    = songRow[SONG_TITLE_INDEX];
@@ -91,6 +90,17 @@ int const SONG_IMAGE_INDEX = 6;
     song.image = image;
 
     [coreDataStack saveContext];
+}
+
++ (NSURL *) urlFromFilepath:(NSString *) filepath;
+{
+    //Remove .mp3 from track name
+    NSString * filename = [filepath stringByReplacingOccurrencesOfString:@".mp3" withString:@""];
+    
+    NSBundle * bundle = [NSBundle bundleForClass:[self class]];
+    NSURL *url = [bundle URLForResource:filename withExtension:@"mp3"];
+
+    return url;
 }
 
 
