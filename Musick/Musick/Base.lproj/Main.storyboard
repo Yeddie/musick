@@ -67,6 +67,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="V0M-9z-Rgt" appends="YES" id="LlI-w3-2H9"/>
+                                    <outletCollection property="gestureRecognizers" destination="mpg-zj-f5l" appends="YES" id="jy5-du-wYv"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMP-hU-bp0">
@@ -146,6 +147,11 @@
                         <action selector="pressPlay:" destination="3vD-MP-cbO" id="aC8-Fm-LY8"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="mpg-zj-f5l">
+                    <connections>
+                        <action selector="swipedRight:" destination="3vD-MP-cbO" id="H0U-DR-ssa"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1915" y="-275"/>
         </scene>

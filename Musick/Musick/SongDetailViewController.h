@@ -24,5 +24,6 @@
 - (void)_pause;
 - (void)_togglePlayButton;
 - (IBAction)pressPlay:(id)sender;
+- (IBAction)swipedRight:(id)sender;
 
 @end

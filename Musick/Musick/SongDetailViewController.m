@@ -55,6 +55,10 @@
     }
 }
 
+- (IBAction)swipedRight:(id)sender {
+    NSLog(@"user swiped right");
+}
+
 - (void)_play:(Song *)song
 {
     [self.audioPlayer play];
