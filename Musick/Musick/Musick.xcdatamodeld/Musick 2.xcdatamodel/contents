@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Playlist" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" syncable="YES"/>
+        <relationship name="songs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Song" inverseName="playlists" inverseEntity="Song" syncable="YES"/>
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES">
         <attribute name="album" optional="YES" attributeType="String" syncable="YES"/>
@@ -12,9 +12,10 @@
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playlists" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Playlist" inverseName="songs" inverseEntity="Playlist" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Song" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Song" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="Playlist" positionX="-63" positionY="36" width="128" height="75"/>
     </elements>
 </model>
