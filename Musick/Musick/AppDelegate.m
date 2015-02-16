@@ -21,6 +21,11 @@
     //[Song loadAll];
     //[Song deleteAll];
     
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                       NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:16]
+                                                       } forState:UIControlStateNormal];
     return YES;
 }
 

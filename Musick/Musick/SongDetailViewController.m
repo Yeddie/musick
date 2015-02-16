@@ -7,6 +7,7 @@
 //
 
 #import "SongDetailViewController.h"
+#import "SongPageViewController.h"
 
 
 @interface SongDetailViewController ()
@@ -17,16 +18,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tabBarController.tabBar.hidden = YES;
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     if (self.song != nil) {
+    [super viewWillAppear:animated];
         self.titleLabel.text = self.song.title;
         self.artistLabel.text = self.song.artist;
         self.albumLabel.text = self.song.album;
         self.image.image = [UIImage imageNamed:self.song.image];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (self.song != nil) {
         self.audioPlayer = [self _audioPlayerWithSong:self.song];
         [self.audioPlayer play];
     }
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.song != nil) {
+        self.image.image = nil;
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    self.audioPlayer = nil;
+}
+
+
+#pragma mark - AVAudioPlayer
 
 /*!
  * Return new audio player for given song
@@ -47,18 +74,6 @@
     return self.audioPlayer;
 }
 
-- (IBAction)pressPlay:(id)sender {
-    if ([self.audioPlayer isPlaying]) {
-        [self _pause];
-    } else {
-        [self _play:self.song];
-    }
-}
-
-- (IBAction)swipedRight:(id)sender {
-    NSLog(@"user swiped right");
-}
-
 - (void)_play:(Song *)song
 {
     [self.audioPlayer play];
@@ -73,6 +88,34 @@
 
 -(void)_togglePlayButton
 {
-    [self.pauseLabel setText:([self.audioPlayer isPlaying] ? @"" : @"Pause")];
+    if ([self.audioPlayer isPlaying]) {
+        self.pauseImage.image = nil;
+        self.pauseImage.backgroundColor = [UIColor clearColor];
+    } else {
+        self.pauseImage.image = [UIImage imageNamed:@"pause"];
+        self.pauseImage.backgroundColor = [UIColor colorWithRed:170.0 green:170.0 blue:170.0 alpha:0.45];
+    }
 }
+
+#pragma mark - IBActions
+
+- (IBAction)pressPlay:(id)sender {
+    if ([self.audioPlayer isPlaying]) {
+        [self _pause];
+    } else {
+        [self _play:self.song];
+    }
+}
+
+- (IBAction)hideSong:(id)sender {
+    [self dismissSelf];
+}
+
+- (void)dismissSelf {
+    [self.songTableViewController.pageViewController willMoveToParentViewController:nil];
+    [self.songTableViewController.pageViewController.view removeFromSuperview];
+    [self.songTableViewController.pageViewController removeFromParentViewController];
+    [self.songTableViewController viewDidAppear:YES];
+}
+
 @end

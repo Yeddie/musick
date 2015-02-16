@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68435B801A910F8E00DDFD99 /* SongPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68435B7F1A910F8E00DDFD99 /* SongPageViewController.m */; };
 		68AF627E1A8FA50200894867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF627D1A8FA50200894867 /* main.m */; };
 		68AF62811A8FA50200894867 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62801A8FA50200894867 /* AppDelegate.m */; };
 		68AF62841A8FA50200894867 /* Musick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68AF62821A8FA50200894867 /* Musick.xcdatamodeld */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		68435B441A90083F00DDFD99 /* Musick 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Musick 2.xcdatamodel"; sourceTree = "<group>"; };
+		68435B7E1A910F8E00DDFD99 /* SongPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPageViewController.h; sourceTree = "<group>"; };
+		68435B7F1A910F8E00DDFD99 /* SongPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPageViewController.m; sourceTree = "<group>"; };
 		68AF62781A8FA50200894867 /* Musick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68AF627C1A8FA50200894867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68AF627D1A8FA50200894867 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				68AF627B1A8FA50200894867 /* Supporting Files */,
 				68AF62B51A8FD72000894867 /* SongTableViewCell.h */,
 				68AF62B61A8FD72000894867 /* SongTableViewCell.m */,
+				68435B7E1A910F8E00DDFD99 /* SongPageViewController.h */,
+				68435B7F1A910F8E00DDFD99 /* SongPageViewController.m */,
 			);
 			path = Musick;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				68AF62AF1A8FBCC400894867 /* CHCSVParser.m in Sources */,
 				68AF62A61A8FB50500894867 /* CoreDataStack.m in Sources */,
 				68AF62841A8FA50200894867 /* Musick.xcdatamodeld in Sources */,
+				68435B801A910F8E00DDFD99 /* SongPageViewController.m in Sources */,
 				68AF627E1A8FA50200894867 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SongTableViewController : UITableViewController
-
+@property (strong, nonatomic) UIPageViewController *pageViewController;
 @end
