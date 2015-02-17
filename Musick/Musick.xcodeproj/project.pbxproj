@@ -122,6 +122,8 @@
 				68AF62B11A8FC13E00894867 /* SongTableViewController.m */,
 				68AF62C31A8FE01100894867 /* SongDetailViewController.h */,
 				68AF62C41A8FE01100894867 /* SongDetailViewController.m */,
+				68AF62B51A8FD72000894867 /* SongTableViewCell.h */,
+				68AF62B61A8FD72000894867 /* SongTableViewCell.m */,
 				68AF62881A8FA50200894867 /* Main.storyboard */,
 				68AF628D1A8FA50200894867 /* LaunchScreen.xib */,
 				68AF628B1A8FA50200894867 /* Images.xcassets */,
@@ -131,8 +133,6 @@
 				68AF62AE1A8FBCC400894867 /* CHCSVParser.h */,
 				68AF62AD1A8FBCC400894867 /* CHCSVParser.m */,
 				68AF627B1A8FA50200894867 /* Supporting Files */,
-				68AF62B51A8FD72000894867 /* SongTableViewCell.h */,
-				68AF62B61A8FD72000894867 /* SongTableViewCell.m */,
 				68435B7E1A910F8E00DDFD99 /* SongPageViewController.h */,
 				68435B7F1A910F8E00DDFD99 /* SongPageViewController.m */,
 			);

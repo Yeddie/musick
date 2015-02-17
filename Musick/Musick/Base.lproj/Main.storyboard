@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Songs-->
@@ -75,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YBx-uj-Jhz">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YBx-uj-Jhz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -225,85 +224,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pp1-uT-Mmc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hGM-1R-AQ8">
-                            <connections>
-                                <segue destination="cKS-OL-fIv" kind="push" id="yKA-gO-8Pg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hGM-1R-AQ8"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="job-r2-Ktk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1489" y="764"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="FjA-cM-xxh">
-            <objects>
-                <viewController id="cKS-OL-fIv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9Dq-n3-DIk"/>
-                        <viewControllerLayoutGuide type="bottom" id="2HK-Ud-RFP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Qzl-Ti-6i0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAh-gh-NSm">
-                                <rect key="frame" x="0.0" y="64" width="320" height="62"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Playlist Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vM5-40-V1T">
-                                        <rect key="frame" x="8" y="16" width="304" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="vM5-40-V1T" secondAttribute="height" multiplier="152:15" id="aay-6y-xjB"/>
-                                        </constraints>
-                                        <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="vM5-40-V1T" firstAttribute="trailing" secondItem="cAh-gh-NSm" secondAttribute="trailingMargin" id="01S-6G-fa6"/>
-                                    <constraint firstAttribute="width" secondItem="cAh-gh-NSm" secondAttribute="height" multiplier="160:31" id="P2g-nA-7ko"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="vM5-40-V1T" secondAttribute="bottom" constant="8" id="hHe-eP-ypX"/>
-                                    <constraint firstItem="vM5-40-V1T" firstAttribute="top" secondItem="cAh-gh-NSm" secondAttribute="topMargin" constant="8" id="vto-p7-lc9"/>
-                                    <constraint firstItem="vM5-40-V1T" firstAttribute="leading" secondItem="cAh-gh-NSm" secondAttribute="leadingMargin" id="zYs-52-Zzs"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kck-bf-2YD">
-                                <rect key="frame" x="0.0" y="126" width="320" height="393"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Kck-bf-2YD" secondAttribute="height" multiplier="320:393" id="ut2-6s-RCM"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playslistDetailReuseId" id="O0A-H2-Jse">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0A-H2-Jse" id="kit-p5-hTa">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cAh-gh-NSm" firstAttribute="top" secondItem="9Dq-n3-DIk" secondAttribute="bottom" id="4CC-M9-73l"/>
-                            <constraint firstAttribute="trailing" secondItem="cAh-gh-NSm" secondAttribute="trailing" id="EmV-E2-fgw"/>
-                            <constraint firstAttribute="trailing" secondItem="Kck-bf-2YD" secondAttribute="trailing" id="KNY-oY-9h4"/>
-                            <constraint firstItem="cAh-gh-NSm" firstAttribute="leading" secondItem="Qzl-Ti-6i0" secondAttribute="leading" id="Lw3-DQ-KpQ"/>
-                            <constraint firstItem="Kck-bf-2YD" firstAttribute="leading" secondItem="Qzl-Ti-6i0" secondAttribute="leading" id="n7d-W8-kdM"/>
-                            <constraint firstItem="Kck-bf-2YD" firstAttribute="top" secondItem="cAh-gh-NSm" secondAttribute="bottom" id="rRM-H6-Iyn"/>
-                            <constraint firstItem="Kck-bf-2YD" firstAttribute="top" secondItem="cAh-gh-NSm" secondAttribute="bottom" id="td0-E4-pS1"/>
-                            <constraint firstItem="2HK-Ud-RFP" firstAttribute="top" secondItem="Kck-bf-2YD" secondAttribute="bottom" id="zag-gJ-t5C"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="HpK-if-Aow"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbo-OQ-LYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1915" y="764"/>
         </scene>
         <!--Playlists-->
         <scene sceneID="osq-Re-c3F">

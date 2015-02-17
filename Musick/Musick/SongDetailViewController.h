@@ -13,20 +13,23 @@
 
 @interface SongDetailViewController : UIViewController
 
+//Song
 @property (strong, nonatomic) Song *song;
+//Music player
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (nonatomic) NSUInteger songIndex;
+@property (strong, nonatomic) SongTableViewController *songTableViewController;
+
+//Outlets
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 @property (weak, nonatomic) IBOutlet UILabel *albumLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIImageView *pauseImage;
 
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-@property (nonatomic) NSUInteger songIndex;
-@property (strong, nonatomic) SongTableViewController *songTableViewController;
-
-- (void)_play:(Song *)song;
-- (void)_pause;
-- (void)_togglePlayButton;
+- (void)play:(Song *)song;
+- (void)pause;
+- (void)togglePauseImage;
 - (IBAction)pressPlay:(id)sender;
 - (IBAction)hideSong:(id)sender;
 

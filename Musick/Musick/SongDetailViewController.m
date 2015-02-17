@@ -16,15 +16,11 @@
 
 @implementation SongDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.tabBarController.tabBar.hidden = YES;
-    self.navigationController.navigationBarHidden = YES;
-}
 
 - (void)viewWillAppear:(BOOL)animated {
-    if (self.song != nil) {
     [super viewWillAppear:animated];
+    //Set lables and image
+    if (self.song) {
         self.titleLabel.text = self.song.title;
         self.artistLabel.text = self.song.artist;
         self.albumLabel.text = self.song.album;
@@ -34,26 +30,22 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    if (self.song != nil) {
+    if (self.song) {
+        //Create audio player and then play song
         self.audioPlayer = [self _audioPlayerWithSong:self.song];
         [self.audioPlayer play];
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    if (self.song != nil) {
-        self.image.image = nil;
-    }
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    //Remove audio player when we have moved to next song
     self.audioPlayer = nil;
 }
 
 
 #pragma mark - AVAudioPlayer
+
 
 /*!
  * Return new audio player for given song
@@ -74,19 +66,31 @@
     return self.audioPlayer;
 }
 
-- (void)_play:(Song *)song
+
+/*!
+ * Play Song
+ */
+- (void)play:(Song *)song
 {
     [self.audioPlayer play];
-    [self _togglePlayButton];
+    [self togglePauseImage];
 }
 
-- (void)_pause
+
+/*!
+ * Pause Song
+ */
+- (void)pause
 {
     [self.audioPlayer pause];
-    [self _togglePlayButton];
+    [self togglePauseImage];
 }
 
--(void)_togglePlayButton
+
+/*!
+ * Show or clear pause image
+ */
+-(void)togglePauseImage
 {
     if ([self.audioPlayer isPlaying]) {
         self.pauseImage.image = nil;
@@ -97,19 +101,29 @@
     }
 }
 
+
 #pragma mark - IBActions
 
+
+/*!
+ * Gesture action to play Song
+ */
 - (IBAction)pressPlay:(id)sender {
     if ([self.audioPlayer isPlaying]) {
-        [self _pause];
+        [self pause];
     } else {
-        [self _play:self.song];
+        [self play:self.song];
     }
 }
 
+
+/*!
+ * Remove pageViewController and return to SongTableViewController
+ */
 - (IBAction)hideSong:(id)sender {
     [self dismissSelf];
 }
+
 
 - (void)dismissSelf {
     [self.songTableViewController.pageViewController willMoveToParentViewController:nil];

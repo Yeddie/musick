@@ -10,8 +10,10 @@
 
 @implementation SongTableViewCell
 
+/*!
+ * Overwrite initWithStyle: Make UITableViewCellStyleSubtitle work with dequeueReusableCellWithIdentifier in SongTableViewController
+ */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    //Fix to make UITableViewCellStyleSubtitle work with dequeueReusableCellWithIdentifier in SongTableViewController
     return [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"songCellReuseId"];
 }
 

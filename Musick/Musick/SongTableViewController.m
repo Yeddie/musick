@@ -15,7 +15,6 @@
 @interface SongTableViewController () <NSFetchedResultsControllerDelegate, UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-
 @property (nonatomic) NSUInteger songCount;
 
 @end
@@ -24,41 +23,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Load custom SongTableViewCell
     [self.tableView registerClass:[SongTableViewCell class] forCellReuseIdentifier:@"songCellReuseId"];
+
     [self.fetchedResultsController performFetch:nil];
 }
 
+
 - (void)viewDidAppear:(BOOL)animated {
-    self.tabBarController.tabBar.hidden = NO;
-    [self navigatioBarAppearance];
+    [super viewDidAppear:animated];
+    [self hideApplicationBars: NO];
 }
 
-- (void)navigatioBarAppearance {
-    self.navigationController.navigationBarHidden = NO;
-    NSDictionary *options = @{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:25],
-                              NSForegroundColorAttributeName: [UIColor whiteColor]};
-    [self.navigationController.navigationBar setTitleTextAttributes:options];
+
+/*!
+ * Hide or show tab bar and navigation bar
+ */
+- (void)hideApplicationBars:(BOOL)hidden {
+    //Hide or show tab bar
+    self.tabBarController.tabBar.hidden = hidden;
+    //Hide or show navigation bar
+    self.navigationController.navigationBarHidden = hidden;
 }
 
+
+/*!
+ * Hide status bar
+ */
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
 
+
 #pragma mark - NSFetchRequest
 
-- (NSFetchRequest *)entryListFetchRequest {
+
+/*!
+ * Create fetchRequest for Songs
+ */
+- (NSFetchRequest *)songListFetchRequest {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Song"];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:NO]];
     return fetchRequest;
 }
 
+
+/*!
+ * Create fetchedResultsController of Songs to display them
+ */
 - (NSFetchedResultsController *)fetchedResultsController {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
-    NSFetchRequest *fetchRequest = [self entryListFetchRequest];
     
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    NSFetchRequest *fetchRequest = [self songListFetchRequest];
+    
+    //Get count of total Songs
     NSError *error;
     self.songCount = [coreDataStack.managedObjectContext countForFetchRequest:fetchRequest error:&error];
     if (error) {
@@ -74,12 +96,15 @@
     return _fetchedResultsController;
 }
 
+
 #pragma mark - Table view data source
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
@@ -87,6 +112,7 @@
     
     return [sectionInfo numberOfObjects];
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"songCellReuseId" forIndexPath:indexPath];
@@ -100,25 +126,33 @@
     cell.detailTextLabel.textColor = [UIColor whiteColor];
     
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20];
-    
     cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Create pageViewController
     [self initPageViewController:indexPath];
+    //Deselect row since viewDidDisappear does get triggered
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+
 #pragma mark - UIPageViewControllerDataSource
 
+
+/*!
+ * Create SongPageViewController and display SongDetailViewController for picked Song
+ */
 - (void) initPageViewController:(NSIndexPath *)indexPath {
     UIPageViewController *pageController = [self.storyboard instantiateViewControllerWithIdentifier: @"SongPageController"];
     pageController.dataSource = self;
 
     if (self.songCount) {
+        //Create 1 viewController for picked Song
         NSArray *startingViewControllers = @[[self songDetailViewControllerForIndex: indexPath]];
         [pageController setViewControllers: startingViewControllers
                                  direction: UIPageViewControllerNavigationDirectionForward
@@ -127,14 +161,17 @@
     }
     
     self.pageViewController = pageController;
-    self.tabBarController.tabBar.hidden = YES;
-    self.navigationController.navigationBarHidden = YES;
+    
+    [self hideApplicationBars: YES];
     [self addChildViewController: self.pageViewController];
     [self.view addSubview: self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController: self];
 }
 
 
+/*!
+ * Activates when user swipes left - create SongDetailViewController for previous song
+ */
 - (UIViewController *) pageViewController: (UIPageViewController *) pageViewController viewControllerBeforeViewController:(UIViewController *) viewController
 {
     SongDetailViewController *songDetailViewController = (SongDetailViewController *) viewController;
@@ -146,10 +183,14 @@
         NSIndexPath *path = [NSIndexPath indexPathForRow:songIndex - 1 inSection:0];
         return [self songDetailViewControllerForIndex:path];
     }
-
+    
     return nil;
 }
 
+
+/*!
+ * Activates when user swipes right - create SongDetailViewController for next song
+ */
 - (UIViewController *) pageViewController: (UIPageViewController *) pageViewController viewControllerAfterViewController:(UIViewController *) viewController
 {
     SongDetailViewController *songDetailViewController = (SongDetailViewController *) viewController;
@@ -164,8 +205,11 @@
     
     return nil;
 }
- 
 
+ 
+/*!
+ * Create SongDetailViewController and set Song property
+ */
 - (SongDetailViewController *) songDetailViewControllerForIndex:(NSIndexPath *)indexPath
 {
     if (indexPath.row < self.songCount){
@@ -178,5 +222,6 @@
     
     return nil;
 }
+
 
 @end

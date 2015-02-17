@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Song.h"
+#import "CoreDataStack.h"
 
 @interface AppDelegate ()
 
@@ -17,15 +18,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //Dev functions to test data loading - REMOVE!!!!
     //[Song loadAll];
     //[Song deleteAll];
     
-    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    //Load defualt songs
+    [self checkDefaultSongs];
     
-    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor],
-                                                       NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:16]
-                                                       } forState:UIControlStateNormal];
+    //Set appearance of the application
+    [self setGlobalAppearance];
+    
     return YES;
 }
 
@@ -50,6 +52,47 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+}
+
+- (NSFetchRequest *)entryListFetchRequest {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Song"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:NO]];
+    return fetchRequest;
+}
+
+/*!
+ * Check Song entity, insert 5 default songs if empty
+ */
+- (void)checkDefaultSongs {
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    NSFetchRequest *fetchRequest = [self entryListFetchRequest];
+    
+    NSError *error;
+    NSUInteger songCount = [coreDataStack.managedObjectContext countForFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Error getting song count: %@", error);
+    } else if (songCount == 0) {
+        [Song loadAll];
+    }
+}
+
+/*!
+ * Configure appearance of the application
+ */
+- (void)setGlobalAppearance {
+    //Set tab bar tint color to white
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    //Set tab bar font style and color
+    [UITabBarItem.appearance setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                       NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:16]
+                                                       } forState:UIControlStateNormal];
+    
+    //Set navigation bar font style and color
+    NSDictionary *options = @{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:25],
+                              NSForegroundColorAttributeName: [UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:options];
 }
 
 @end
